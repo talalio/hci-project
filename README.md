@@ -24,6 +24,6 @@ COVID-19 Tracker a Project for Human Computer Interaction (HCI)
 `python manage.py runserver`   
 
 # TODO
-- [ ] Add search functionality
+- [ ] Add search
 - [ ] Add TTS (Text To Speech)
 - [ ] Improve code quality
