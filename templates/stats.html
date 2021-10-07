@@ -1,0 +1,93 @@
+{% extends '_base.html' %}
+
+{% block title %}
+    COVID-19 Statistics
+{% endblock title %}
+
+{% block content %}
+<div>
+  <!-- Global Statistics -->
+  <div class="card" style="width: 30rem;margin: 10px 10px 10px 10px; ">
+    <div class="card-header">Global Statistics</div>
+    <div class="card-text" style="display: flex;">
+      {% for key, value in data.items %}
+        {% if key != 'lastUpdate' and key != 'lastChange' %}
+          {% if key == 'deaths' %}
+            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
+              <div class="card-header">{{ key | capfirst }}</div>
+              <div>
+                <p class="card-text" style="color: red;">{{ value }}</p>
+              </div>
+            </div>
+          {% elif key == 'recovered' %}
+            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
+              <div class="card-header">{{ key | capfirst }}</div>
+              <div>
+                <p class="card-text" style="color: lightgreen;">{{ value }}</p>
+              </div>
+            </div>
+          {% else %}
+            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
+              <div class="card-header">{{ key | capfirst }}</div>
+              <div>
+                <p class="card-text">{{ value }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% empty %}
+        <div class="card" style="width: auto; max-width: 18rem; text-align: left;">
+          <div class="card-header">Not Found</div>
+          <div>
+            <p class="card-text" style="margin: 3px 3px 3px 3px;">Sorry no data was found!! try to refresh the page.</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="card-footer">
+        {% for key, value in data.items %}
+          {% if key == 'lastUpdate' %}
+            <small class="text-muted">Last updated : {{ value }}</small>
+          {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+  <!-- Countries Statistics table -->
+  <div style="margin: 10px 10px 10px 10px;">
+    <h5>Statistics by Country</h5>
+    <hr>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Country</th>
+          <th scope="col">Code</th>
+          <th scope="col">Confirmed</th>
+          <th scope="col">Recovered</th>
+          <th scope="col">Critical</th>
+          <th scope="col">Deaths</th>
+          <th scope="col">LastUpdate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for country in countries %}
+          <tr>
+            {% for key, value in country.items %}
+              {% if key != 'lastChange' and key != 'longitude' and key != 'latitude' %}
+                {% if key == 'deaths' and value > 10_000 %}
+                  <td class="table-danger">{{ value }}</td>
+                {% elif key == 'deaths' and value < 10_000 %}
+                  <td class="table-warning">{{ value }}</td>
+                {% elif key == 'recovered' and value > 100_000 %}
+                  <td class="table-success">{{ value }}</td>
+                {% else %} 
+                  <td>{{ value }}</td>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor%}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}

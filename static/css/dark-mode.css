@@ -1,0 +1,48 @@
+.ccontainer{
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.sun, .moon{
+    font-size: 10rem;
+    width: 30px;
+    height: 30px;
+}
+
+.moon{
+    position: absolute;
+    inset: 1;
+}
+
+.moon-logo{
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+    transition: all 1s ease-out;
+}
+
+.sun-logo{
+    opacity: 0;
+    transform: translateY(0) rotateZ(0deg);
+    transition: all 1s ease-out;
+    fill: white;
+}
+
+.animate-sun{
+    opacity: 1;
+    transform: translateY(0) rotateZ(100deg);
+}
+
+.animate-moon{
+    opacity: 0;
+    transform: translateY(0) rotateZ(360deg);
+}
+
+.animate-moon path{
+  fill: black;
+}
+
+.animate-sun path{
+  fill: white;
+}

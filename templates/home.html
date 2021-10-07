@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}
+    COVID-19 Tracker
+{% endblock title %}
+
+{% block nextBrandLink %}
+    <a class="nav-link" href="{% url 'trackerapp:stats' %}">Stats <span class="sr-only">(current)</span></a>
+{% endblock nextBrandLink %}
+
+{% block content %}
+<div style="padding: 10px 10px 10px 10px;">
+    <div>
+        <h5>About Coronavirus</h5>
+        <hr>
+        <div>
+            <p>Coronaviruses are a large group of viruses; some cause illness in people and some occur in animals, including camels, civet cats and bats. Rarely, animal coronaviruses can evolve and infect people and then may spread between people. Human coronaviruses cause routine seasonal respiratory virus infections. Other coronaviruses, 
+                like SARS and MERS, can cause serious illnesses.</p>
+        </div>
+    </div>
+    <div>
+        <div>
+          <h5>How COVID-19 Spreads</h5>
+          <hr>
+          <p>
+            COVID-19 spreads when an infected person breathes out droplets and very small particles that contain the virus. These droplets and particles can be breathed in by other people or land on their eyes, noses, or mouth. In some circumstances, they may contaminate surfaces they touch. People who are closer than 6 feet from the infected person are most likely to get infected.
+
+            COVID-19 is spread in three main ways:
+                <ul>
+                    <li>Breathing in air when close to an infected person who is exhaling small droplets and particles that contain the virus.</li>
+                    <li> Having these small droplets and particles that contain virus land on the eyes, nose, or mouth, especially through splashes and sprays like a cough or sneeze.</li>
+                    <li>Touching eyes, nose, or mouth with hands that have the virus on them.</li>
+                </ul>
+                <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fprepare%2Ftransmission.html" target="_blank">Read more</a>
+          </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
