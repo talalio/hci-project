@@ -8,8 +8,7 @@ COVID-19 Tracker a Project for Human Computer Interaction (HCI)
 ##### Clone this repository   
 `git clone https://github.com/talalOfficial/hci-project.git`   
 ##### Create a virtual environment and activate it   
-`python3 -m virtualenv venv`   
-`source venv/bin/activate`   
+`python3 -m virtualenv venv && source venv/bin/activate`   
 ##### Change to the project directory and install requirements   
 `cd hci-project && pip install -r requirements.txt`   
 ##### Generate a new django SECRET_KEY using   
