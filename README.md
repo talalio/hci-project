@@ -1,5 +1,4 @@
-# hci-project
-COVID-19 Tracker a Project for Human Computer Interaction (HCI)
+# :warning: Project is under active development
 
 # Installation
 
