@@ -12,28 +12,18 @@
     <div class="card-text" style="display: flex;">
       {% for key, value in data.items %}
         {% if key != 'lastUpdate' and key != 'lastChange' %}
-          {% if key == 'deaths' %}
-            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
+          <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
               <div class="card-header">{{ key | capfirst }}</div>
-              <div>
-                <p class="card-text" style="color: red;">{{ value }}</p>
-              </div>
-            </div>
-          {% elif key == 'recovered' %}
-            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
-              <div class="card-header">{{ key | capfirst }}</div>
-              <div>
-                <p class="card-text" style="color: lightgreen;">{{ value }}</p>
-              </div>
-            </div>
-          {% else %}
-            <div class="card" style="width: auto; max-width: 18rem; text-align: center; margin: 5px 5px 5px 5px;">
-              <div class="card-header">{{ key | capfirst }}</div>
-              <div>
-                <p class="card-text">{{ value }}</p>
-              </div>
-            </div>
-          {% endif %}
+                <div>
+                  {% if key == 'deaths' %}
+                    <p class="card-text" style="color: red;">{{ value }}</p>
+                  {% elif key == 'recovered' %}
+                    <p class="card-text" style="color: lightgreen;">{{ value }}</p>
+                  {% else %}
+                    <p class="card-text">{{ value }}</p>
+                  {% endif %}
+                </div>
+          </div>
         {% endif %}
       {% empty %}
         <div class="card" style="width: auto; max-width: 18rem; text-align: left;">
