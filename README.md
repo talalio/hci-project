@@ -24,11 +24,13 @@
 
 # Credits
 - `<main>` content [@ib-bib](https://github.com/ib-bib)
-- icons & svgs [icons8](https://icons8.com/) [icofont](https://icofont.com/)
+- icons & svgs 
+  - [![icons8](https://icons8.com/vue-static/landings/primary-landings/favs/icons8_fav_32×32.png) icons8](https://icons8.com) 
+  - [![icofont](https://icofont.com/images/favicon.png) icofont](https://icofont.com/)
 - dark mode [@forevolve](https://github.com/ForEvolve/bootstrap-dark)
 - API [RapidAPI](https://rapidapi.com/)
 
 # TODO
-- [ ] Add search
 - [x] Add TTS (Text To Speech)
+- [ ] Add search
 - [ ] Improve code quality
