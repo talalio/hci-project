@@ -22,6 +22,12 @@
 `python manage.py migrate`   
 `python manage.py runserver`   
 
+# Credits
+- `<main>` content @ib-bib
+- icons & svgs [icons8](https://icons8.com/) [icofont](https://icofont.com/)
+- dark mode [@forevolve](https://github.com/ForEvolve/bootstrap-dark)
+- API [RapidAPI](https://rapidapi.com/)
+
 # TODO
 - [ ] Add search
 - [x] Add TTS (Text To Speech)
