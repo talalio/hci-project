@@ -23,7 +23,7 @@
 `python manage.py runserver`   
 
 # Credits
-- `<main>` content @ib-bib
+- `<main>` content [@ib-bib](https://github.com/ib-bib)
 - icons & svgs [icons8](https://icons8.com/) [icofont](https://icofont.com/)
 - dark mode [@forevolve](https://github.com/ForEvolve/bootstrap-dark)
 - API [RapidAPI](https://rapidapi.com/)
