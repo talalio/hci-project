@@ -24,5 +24,5 @@
 
 # TODO
 - [ ] Add search
-- [ ] Add TTS (Text To Speech)
+- [x] Add TTS (Text To Speech)
 - [ ] Improve code quality
