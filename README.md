@@ -1,4 +1,3 @@
-# :warning: Project is under active development :warning:
 
 # Installation
 
